@@ -26,12 +26,23 @@ This expression is broken down into anchors, quantifiers, OR operator, character
 ## Regex Components
 
 ### Anchors
+Anchors match to a position either before or after character(s)
+- `^` represents the beginning of the text.
+- `$` represents the end of the text.
 
 ### Quantifiers
+Quantifiers match the number of instances of a character class, group, or character within a string.
+- `{n}` represents the number of characters or character classes we want to match.
+- `?` is a quantifier that matches the preceding item character either zero or one times.
 
 ### OR Operator
+The OR operator is a term that represents alternation in a regex.
+- `|` is known as an OR Operator
+  * Ex: `green|orange` allows for either green OR orange within the string.
+-  Our expression contains `[a-f0-9]{6}|[a-f0-9]{3}`. So, we are looking for either `[a-f0-9]{6}` or `[a-f0-9]{3}
 
 ### Character Classes
+Character classes define certain characters, meaning you can distinguish the difference in letters and digits. You can use a hyphen to define a specific range of characters.
 
 ### Flags
 
