@@ -29,6 +29,7 @@ This expression is broken down into anchors, quantifiers, OR operator, character
 Anchors match to a position either before or after character(s)
 - `^` represents the beginning of the text.
 - `$` represents the end of the text.
+- Code snipet: `/^#?([a-f0-9]{6}|[a-f0-9]{3})$/`
 
 ### Quantifiers
 Quantifiers match the number of instances of a character class, group, or character within a string.
@@ -43,21 +44,29 @@ The OR operator is a term that represents alternation in a regex.
 
 ### Character Classes
 Character classes define certain characters, meaning you can distinguish the difference in letters and digits. You can use a hyphen to define a specific range of characters.
-
-### Flags
+  * Ex: `[a-z]` is a character class that searches and matches any single lowercase letter between a and z.
+* Code snipet: `[a-f0-9]`
+* In our expression we have set a range of `[a-f0-9]` this means our character class contains any lowercase letters a-f and/or the digits 0-9.
 
 ### Grouping and Capturing
+In a regular expression, you can group and capture a pattern by enclosing it within a pair of closed parentheses `()`.
+  * Ex: `(a-z)` means any lowercase letters a to z.
+* Code snipet: `([a-f0-9]{6}|[a-f0-9]{3})`
+* For our expression, we are trying to capture this ([a-f0-9]{6}|[a-f0-9]{3}) piece of the code.
 
 ### Bracket Expressions
+In regular expressions, you can use brackets `[]` to find a range of characters.
+  * Ex: `[w-z]` could also be written as `[wxyz]`
+* Code snipet: `[a-f0-9]`
+* For our expression, we have `[a-f0-9]` in which we are looking for a string contains any lowercase letters a-f and/or the digits 0-9.
 
 ### Greedy and Lazy Match
-
-### Boundaries
-
-### Back-references
-
-### Look-ahead and Look-behind
+Greedy match looks for the longest possible string. Lazy match looks for the shortest possible string.
+* Code snipet: `?([a-f0-9]{6}|[a-f0-9]{3})`
+* In our regular expression, we are use a lazy match by using the `?` to match the smallest possible string.
 
 ## Author
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+This tutorial was authored by Will Brent (AKA Samurai_huey), I am a new developer just finishing up the Coding Bootcamp from University of Richmond
+
+https://github.com/SamuraiHuey
